@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url("bg.png");
+    }
+    div
+    #WT
+         {color : #66FF00;
+        text-align: center;
+        background: #000;
+    }
+    .container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.7s ease;
+    }
+    input[type="submit"]:disabled {
+        background-color: #000000;
+        cursor: not-allowed;
+    }
+    input[type="submit"]:hover {
+        transform: translateX(+200px);
+    }
+    #loginBtn{
+        width: 50px;
+    }
+    h2{
+        color: rgb(255, 255, 255);
+    }
+    marquee{
+        color: rgb(0, 0, 0);
+        font-size: 40px;
+        background-color: #66FF00;
+
+    }
+    #header{
+        background-color: #000;
+        color : #66FF00;
+        left: 100px;
+        right: 100px;
+        top: 100px;
+        padding: 0px;
+    }
+    a.nav1{
+    color: #66FF00;
+    text-decoration: none;
+    }
+    a.nav2{
+    color: #66FF00;
+    text-decoration: none;
+    }
+    a.nav3{
+    color: #66FF00;
+    text-decoration: none;
+    }
+    a.nav1:hover{
+        background-color: #ff008c;
+        color: aquamarine;
+    }
+    a.nav2:hover{
+        background-color: #00ff80;
+        color: rgb(0, 0, 0);
+    }
+    a.nav3:hover{
+        background-color: #000dff;
+        color: rgb(0, 0, 0);
+    }
+    #nav{
+        width: 200px;
+        padding: auto;
+    }
+    #div1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #nav_footer{
+        background-color: #66FF00;
+        color: #ff008c;
+        height: 60px;
+    }
+    a#nav_footer{
+        background-color: #66FF00;
+        color: #ff008c;
+    }
+    a.nav_footer1{
+        color: #df9fea;
+        text-decoration: none;
+        }
+        a.nav_footer2{
+        color: #ffffff;
+        text-decoration: none;
+        }
+        a.nav_footer3{
+        color: #1900ff;
+        text-decoration: none;
+        }
+        a.nav_footer1:hover{
+            background-color: #ff008c;
+            color: aquamarine;
+        }
+        a.nav_footer2:hover{
+            background-color: #00ff80;
+            color: rgb(0, 0, 0);
+        }
+        a.nav_footer3:hover{
+            background-color: #000dff;
+            color: rgb(0, 0, 0);
+        }
+        .tt{
+            color: #0015ff;
+        }
+</style>
+</head>
+<body>
+    <div id="header">
+        <h1 id="WT" >
+            WorstSoci'O
+        </h1>
+        <nav id="nav">
+            <!-- <a class="nav1" href="Home">Home</a> -->
+            <a class="nav2" href="login.html">Login</a>
+            <a class="nav3" href="about_us.html">About Us</a>
+        </nav>
+    </div>
+<div class="container">
+<div id="1">
+    <h2>Login</h2>
+    <img src="03.png" alt="funny_image">
+    <form id="loginForm" action="home.html">
+        <label for="username"class = "tt">Username</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password"class = "tt">Password</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" class = "tt"id="loginBtn" value="Login" disabled>
+    </form>
+</div>
+
+<div id="1">
+ 
+</div>
+</div>
+
+    <footer>
+        <marquee behavior="move" direction="right">This is the WorstSoci'O &#169; 2024 All Rights Are Reserved</marquee>
+        <marquee behavior="move" direction="right"><nav id="nav_footer">
+            <!-- <a class="nav_footer1" href="Home">Home</a> -->
+            <a class="nav_footer2" href="Login">Login</a>
+            <a class="nav_footer3" href="About Us">About Us</a>
+        </nav>
+    </marquee>
+    </footer>
+<script>
+    document.getElementById("loginForm").addEventListener("input", function() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var loginBtn = document.getElementById("loginBtn");
+        if (username.trim() !== "" && password.trim() !== "") {
+            loginBtn.disabled = false;
+        } else {
+            loginBtn.disabled = false;
+        }
+    });
+</script>
+</body>
+</html>
